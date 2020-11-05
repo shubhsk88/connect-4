@@ -6,6 +6,7 @@ import Board from './components/Board';
 import { checkWinner, createArray, getRowIdx, isValid } from './utils';
 import PlayContext from './context/PlayContext';
 import Text from './components/Text';
+import Instruction from './components/Instruction;';
 
 
 
@@ -54,12 +55,13 @@ function App() {
   return (
     <div className="flex flex-col justify-center h-screen items-center">
       <div className="py-10 text-6xl ">Connect 4 game</div>
+      <Instruction />
 
       <PlayContext.Provider value={play}>
 
         {isOver ? <Text text={result} /> : <Board board={board} />}
       </PlayContext.Provider>
-      <button onClick={restart} className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded shadow-lg my-6 text-4xl">Restart</button>
+      <button onClick={restart} className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded-lg shadow-lg my-6 text-4xl">Restart</button>
 
     </div>
   );

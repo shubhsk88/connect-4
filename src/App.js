@@ -53,7 +53,7 @@ function App() {
 
 
   return (
-    <div className="flex flex-col justify-center h-screen items-center">
+    <div className="flex flex-col justify-center items-center">
       <div className="py-10 text-6xl ">Connect 4 game</div>
       <Instruction />
 

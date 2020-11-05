@@ -1,6 +1,6 @@
 .cell{
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   background-color: aqua;
   display: grid;
   place-items: center;
@@ -9,8 +9,8 @@
 
 }
 .element{
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   transition: background-color 0.5s;
   
   border-radius: 50%;

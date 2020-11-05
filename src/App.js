@@ -3,12 +3,14 @@ import { COL, ROW } from './constants'
 
 import './App.css';
 import Board from './components/Board';
-import { checkWinner, getRowIdx, isValid } from './utils';
+import { checkWinner, createArray, getRowIdx, isValid } from './utils';
 import PlayContext from './context/PlayContext';
 
 
+
+
 function App() {
-  const [board, setBoard] = useState(new Array(ROW).fill(new Array(COL).fill(0)))
+  const [board, setBoard] = useState(() => createArray())
   const [turn, setTurn] = useState(0);
   function insert(row, col, value) {
     board[row][col] = value;

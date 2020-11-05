@@ -16,6 +16,26 @@ export const getRowIdx = (board, col) => {
     }
 }
 
+//Using stackoverflow
+
+/**
+ * @returns {number[][]}
+ */
+export const createArray = () => {
+    const arr = new Array(ROW);
+    for (let i = 0; i < arr.length; i += 1) {
+        arr[i] = new Array(COL);
+
+    }
+    for (let i = 0; i < ROW; i++) {
+        for (let j = 0; j < COL; j++) {
+            arr[i][j] = 0;
+        }
+    }
+    return arr;
+
+}
+
 
 /**
  * 

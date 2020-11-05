@@ -1,0 +1,16 @@
+.cell{
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+
+}
+.element{
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+}

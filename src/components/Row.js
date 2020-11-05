@@ -4,7 +4,7 @@ import Cell from './Cell'
 
 const Row = ({ row }) => {
     return (
-        <div>
+        <div className="flex">
             {row.map((element, idx) => <Cell key={idx} element={element} />)}
         </div>
     )

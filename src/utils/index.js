@@ -2,6 +2,13 @@ import { ROW, COL } from '../constants'
 
 export const isValid = (board, col) => board[ROW - 1][col] === 0
 
+
+/**
+ * 
+ * @param {number[][]} board 
+ * @param {number} col
+ * @returns {number} 
+ */
 export const getRowIdx = (board, col) => {
 
     for (let start = 0; start < ROW; start++) {
@@ -9,6 +16,12 @@ export const getRowIdx = (board, col) => {
     }
 }
 
+
+/**
+ * 
+ * @param {number} input
+ * @returns {string} 
+ */
 export const getColorValue = (input) => {
     let x = 'element bg-white';
     if (input === 1) x = 'element bg-red-400';
@@ -16,6 +29,13 @@ export const getColorValue = (input) => {
 
     return x;
 }
+
+/**
+ * 
+ * @param {number} item 
+ * @param {number[][]} board 
+ * @return {boolean}
+ */
 
 export const checkWinner = (item, board) => {
 

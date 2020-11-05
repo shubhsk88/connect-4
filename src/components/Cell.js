@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import PlayContext from '../context/PlayContext'
+
 
 const Cell = ({ element }) => {
+    const play = useContext(PlayContext)
+
     return (
         <div className="cell">
             <div className="element"></div>

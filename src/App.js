@@ -3,8 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Hello World
+    <div className="flex flex-col justify-center h-screen items-center">
+      Connect 4 game
+      <div>Board Container</div>
+      <button>Restart</button>
     </div>
   );
 }

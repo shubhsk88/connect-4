@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { COL, ROW } from './constants'
+
 
 import './App.css';
 import Board from './components/Board';

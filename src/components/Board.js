@@ -7,7 +7,7 @@ const Board = ({ board }) => {
 
     return (
         <div>
-            {board.map((row, idx) => <Row key={idx} row={row} />)}
+            {[...board].reverse().map((row, idx) => <Row key={idx} row={row} />)}
         </div>
     )
 }

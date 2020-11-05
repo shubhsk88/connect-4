@@ -78,6 +78,13 @@ export const checkWinner = (item, board) => {
             if (board[row][col] === item && board[row + 1][col + 1] === item && board[row + 2][col + 2] === item && board[row + 3][col + 3] === item) return true;
         }
     }
+    // Checking the inverse diagonality ,using stack Overflow
+    for (let row = 3; row < ROW; row++) {
+        for (let col = 0; col < COL - 3; col++) {
+            if (board[row][col] === item && board[row - 1][col + 1] === item && board[row - 2][col + 2] === item && board[row - 3][col + 3] === item) return true;
+        }
+    }
+
 
     return false;
 

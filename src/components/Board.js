@@ -1,4 +1,5 @@
 import React from 'react'
+import Row from './Row'
 
 
 const Board = ({ board }) => {
@@ -6,7 +7,7 @@ const Board = ({ board }) => {
 
     return (
         <div>
-            {board.map((row, idx) => <div>Row</div>)}
+            {board.map((row, idx) => <Row key={idx} row={row} />)}
         </div>
     )
 }

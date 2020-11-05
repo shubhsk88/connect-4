@@ -5,6 +5,7 @@ import './App.css';
 import Board from './components/Board';
 import { checkWinner, createArray, getRowIdx, isValid } from './utils';
 import PlayContext from './context/PlayContext';
+import Text from './components/Text';
 
 
 
@@ -16,8 +17,10 @@ function App() {
   const [isOver, setIsOver] = useState(false);
   function insert(row, col, value) {
     board[row][col] = value;
+
     setBoard(board)
   }
+
   function play(col) {
     if (isValid(board, col)) {
       const player = turn % 2 + 1;
@@ -39,17 +42,24 @@ function App() {
     }
 
   }
-  console.log(board)
+  const restart = () => {
+    setBoard(createArray());
+    setIsOver(false);
+    setResult(null)
+    setTurn(0)
+  }
+
+
 
   return (
     <div className="flex flex-col justify-center h-screen items-center">
       <div className="py-10 text-6xl ">Connect 4 game</div>
-      
+
       <PlayContext.Provider value={play}>
 
-        <Board board={board} />
+        {isOver ? <Text text={result} /> : <Board board={board} />}
       </PlayContext.Provider>
-      <button className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded shadow-lg my-6 text-4xl">Restart</button>
+      <button onClick={restart} className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded shadow-lg my-6 text-4xl">Restart</button>
 
     </div>
   );
